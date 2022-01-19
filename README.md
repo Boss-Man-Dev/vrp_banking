@@ -3,7 +3,7 @@
 A Banking interface for vrp 2
 
 # Special Instruction
-**Settings** for personalization can be found in the [cfg.lua](https://github.com/Boss-Man-Dev/vrp_banking/blob/main/vrp_banking/cfg/cfg.lua) and the [config.js](https://github.com/Boss-Man-Dev/vrp_banking/blob/main/cfg/html/js/config.js).
+**Settings** for personalization can be found in the [cfg.lua](https://github.com/Boss-Man-Dev/vrp_banking/blob/main/vrp_banking/cfg/cfg.lua) and the [config.js](https://github.com/Boss-Man-Dev/vrp_banking/blob/main/vrp_banking/cfg/html/js/config.js).
 
 My [Discord](http://discord.gg/BSeFZFxsbb/)
 
