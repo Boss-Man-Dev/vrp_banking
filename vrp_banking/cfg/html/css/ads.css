@@ -1,0 +1,16 @@
+.dashboard_adds{
+    height: 24vh;
+    width: 80vh;
+    background-color: #2E2E3C;
+    justify-content: space-around;
+    border-radius: 12px;
+    margin: 0% 3.5%;
+}
+.ad-img{
+    width: 100%;
+    padding: 14% 8%;
+}
+.dashboard_ad-1, .dashboard_ad-2{
+    height: 28vh;
+    width: 80vh;
+}

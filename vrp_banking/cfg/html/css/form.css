@@ -1,0 +1,186 @@
+.form_container{
+    height: 38vh;
+    width: 80vh;
+    background-color: #0000b400;
+}
+.form_title{
+    height: 12vh;
+    width: 80vh;
+    background-color: #00b41800;
+    text-align: center;
+}
+.form_title-main, .form_title-subtitle{
+    color: #c4c4c4;
+    font-family: sans-serif;
+    font-size: 4vh;
+    font-weight: 600;
+    padding-top: 4%;
+}
+.form_title-subtitle {
+    font-size: 1.6vh;
+    padding-top: 1%;
+}
+.form_input-container{
+    height: 15vh;
+    width: 80vh;
+    position: relative;
+}
+#form_deposit, #form_withdraw, #form_transfer, #form_transfer--alt{
+    height: 15vh;
+    width: 85vh;
+    background-color: #b1b40000;
+}
+.form_input-box{
+    width: 73%;
+    height: 10vh;
+    background-color: #22222C;
+    margin: 3% 5%;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #c4c4c400;
+    font-size: 4vh;
+    outline: 0;
+    padding-left: 6%;
+}
+.form_input-cut{
+    background-color: #22222c00;
+    border-radius: 10px;
+    height: 3vh;
+    left: 6.8vh;
+    position: absolute;
+    top: -.5vh;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 18vh;
+}
+.alt_w {
+    width: 19vh;
+}
+.alt_d {
+    width: 17vh;
+}
+.form_input-placeholder {
+    color: #c4c4c4;
+    font-family: sans-serif;
+    left: 8vh;
+    line-height: 1.5vh;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 7vh;
+    font-size: 5vh;
+}
+.form_input-enter{
+    min-height: 10vh;
+    width: 10vh;
+    background-color: #22222C;
+    margin: 3% auto;
+    border-radius: 12px;
+}
+.form_enter-img{
+    font-size: 4vh;
+    color: #c4c4c4;
+}
+/* input player alt */
+.form_input-container--alt{
+    height: 15vh;
+    width: 80vh;
+    position: relative;
+}
+.form_input-box--alt{
+    width: 73%;
+    height: 10vh;
+    background-color: #22222C;
+    margin: -1% 5%;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #c4c4c4;
+    font-size: 4vh;
+    outline: 0;
+    padding-left: 6%;
+}
+.form_input-cut--alt{
+    background-color: #22222c00;
+    border-radius: 10px;
+    height: 3vh;
+    left: 6.8vh;
+    position: absolute;
+    top: -3.5vh;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 16vh;
+}
+.form_input-placeholder--alt {
+    color: #c4c4c4;
+    font-family: sans-serif;
+    left: 8vh;
+    line-height: 1.5vh;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 4vh;
+    font-size: 5vh;
+}
+.form_input-enter--alt{
+    min-height: 10vh;
+    width: 10vh;
+    background-color: #22222C;
+    margin: -1% auto;
+    margin-bottom: 7%;
+    border-radius: 12px;
+}
+#form_enter-img--alt{
+    font-size: 4vh;
+    color: #c4c4c4;
+}
+/* Animation */
+.form_input-enter:hover, .form_input-enter--alt:hover{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.form_input-enter:hover #form_enter-img, .form_input-enter--alt:hover #form_enter-img{
+    color: #fff;
+}
+/* Transformers main*/
+.form_input-box:focus ~ .form_input-cut,
+.form_input-box:not(:placeholder-shown) ~ .form_input-cut {
+    transform: translateY(1.5vh);
+    transition-delay: .1s;
+    transition-property: background-color;
+    background-color: #2E2E3C;;
+}
+.form_input-box--alt:focus, .form_input-box{
+    color: #c4c4c4;
+}
+.form_input-box:focus ~ .form_input-placeholder,
+.form_input-box:not(:placeholder-shown) ~ .form_input-placeholder {
+  transform: translateY(-5.4vh) translateX(2px) scale(0.4);
+}
+.form_input-box:not(:placeholder-shown) ~ .form_input-placeholder {
+  color: #808097;
+}
+.form_input-box:focus ~ .form_input-placeholder {
+    color: #dc2f55;
+}
+/* Transformers alt*/
+.form_input-box--alt:focus ~ .form_input-cut--alt,
+.form_input-box--alt:not(:placeholder-shown) ~ .form_input-cut--alt {
+    transform: translateY(1.5vh);
+    transition-delay: .1s;
+    transition-property: background-color;
+    background-color: #2E2E3C;
+}
+.form_input-box--alt:focus ~ .form_input-placeholder--alt,
+.form_input-box--alt:not(:placeholder-shown) ~ .form_input-placeholder--alt {
+  transform: translateY(-5.4vh) translateX(2px) scale(0.4);
+}
+.form_input-box--alt:not(:placeholder-shown) ~ .form_input-placeholder--alt {
+  color: #808097;
+}
+.form_input-box--alt:focus ~ .form_input-placeholder--alt {
+    color: #dc2f55;
+}

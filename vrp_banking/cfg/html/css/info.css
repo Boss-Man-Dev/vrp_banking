@@ -1,0 +1,72 @@
+.main-info{
+    height: 74vh;
+    width: 100%;
+    background-color: #22222C;
+    color: #c4c4c4;
+}
+.main_info-player{
+    height: 74vh;
+    width: 34vh;
+    background-color: #a3000000;
+}
+.info_player{
+    height: 34vh;
+    width: 100%;    
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #3e00a3;
+}
+.player_info-picture_mask{
+    width: 14vh;
+    height: 14vh;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 6% auto;
+    margin-top: 10%;
+}
+.player_info-picture{
+    width: 100%;
+    padding-right: 4px;
+}
+.player_info-list{
+    width: 28vh;
+    height: 10vh;
+    background-color: #0098a300;
+    margin: 0% auto;
+    text-align: center;
+}
+.info_list{
+    margin: 4% auto;
+    font-size: 2.2vh;
+}
+.info_list-money{
+    font-size: 2.5vh;
+}
+
+/*#######################*/
+/*      Nav Buttons      */
+/*#######################*/
+
+.info_nav{
+    height: 40vh;
+    width: 100%;
+    background-color: #0098a300;
+    justify-content: space-evenly;
+}
+.info_nav--btn{
+    min-height: 8vh;
+    width: 22vh;
+    background-color: #2E2E3C;
+    border-radius: 12px;
+    margin: 0% auto;
+    border-color: rgba(128, 255, 0, 0);
+    font-size: 3.5vh;
+    color: #c4c4c4;
+}
+.info_nav--btn:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(128, 255, 0, 0);
+    color: white;
+}

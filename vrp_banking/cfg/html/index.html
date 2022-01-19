@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="js/listener.js" type="text/javascript"></script>
+    <script src="js/config.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/ads.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d5d888400d.js" crossorigin="anonymous"></script>
+</head>
+<body onclick="myFunction(event)">
+    <div class="selection" id="container" >
+        <selection class="main_login flex_c" id="main_login" style="display: none;">    <!-- login -->
+            <div class="login_atm flex_c">
+                <div class="login_atm-greeting">
+                    <h1>Welcome</h1>
+                    <span class="player_name" id="player_name">Player Name</span>
+                </div>
+                <div class="login_atm-pin flex_r">
+                    <div class="login_input-pin" id="login_input-pin" style="display: none;">
+                        <button class="input_pin" id="pin"></button>
+                        <button class="input_pin" id="pin_1"></button>
+                        <button class="input_pin" id="pin_2"></button>
+                        <button class="input_pin" id="pin_3"></button>
+                    </div>
+                    <div class="login_input-enter" id="login_input-enter" style="display: none;">
+                        <button class="input_enter" id="input_enter">
+                            <i class="fas fa-sign-in-alt" id="enter_img"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </selection>
+        <section class="main flex_c" id="main" style="display: none;">                  <!-- main -->
+            <nav>
+                <div class="nav__title" id="nav_title">bank_name - Dashboard</div>
+                <ul class="nav__link--list flex">
+                    <li class="nav__link">
+                        <i class="fas fa-home nav__link--anchor" id="home_btn" style="display: none;"></i>
+                    </li>
+                    <li class="nav__link">
+                        <i class="fas fa-sync-alt nav__link--anchor" id="refresh_btn"></i>
+                    </li>
+                    <li class="nav__link">
+                        <i class="far fa-times-circle nav__link--anchor" id="exit_btn"></i>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-info flex" id="info">
+                <div class="main_info-player flex_c">
+                    <div class="infor_player flex_c">
+                        <figure class="player_info-picture_mask">
+                            <img src="./assets/Default_user.png" class="player_info-picture" alt="Picture of user">
+                        </figure>
+                        <div class="player_info-list">
+                            <li class="info_list">
+                                <h1 class="info_list-name" id="player_name"></h1>
+                            </li>
+                            <li class="info_list">
+                                <i class="fas fa-money-check-alt info_list-bank"> $ <span class="info_list-money" id="player_money"></span></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="info_nav flex_c">
+                        <button class="info_nav--btn" id="deposit">Deposit</button>
+                        <button class="info_nav--btn" id="withdraw">Withdraw</button>
+                        <button class="info_nav--btn" id="transfer">Transfer</button>
+                    </div>
+                </div>
+                <div class="dashboard flex_c">
+                    <div class="dashboard_account flex" id="dashboard_account" style="display: none;">  <!-- dashboard account -->
+                        <div class="account_card">
+                            <div class="account_card-icon flex_r">
+                                <div class="account_card-chip"></div>
+                                <div class="account_card-name">Card</div>
+                            </div>
+                            <div class="account_card-info">
+                                <div class="card_info-number">0000 0000 0000 0000</div>
+                                <div class="card_info-other flex_r">
+                                    <div class="card_info-player">
+                                        <div class="card_info-exp">
+                                            <h5 class="card_exp-title">Valid thru</h5>
+                                            <h5 class="card_exp-year" id="card_exp-year">2023</h5>
+                                        </div>
+                                        <h3 class="player_card-name" id="player_name">Player Name</h3>
+                                    </div>
+                                    <div class="card_info-type">
+                                        <img src="./assets/card_img.png" class="card_type-img" alt="card type">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="placholder">
+                            <img src="./assets/placeholder.png" class="placholder-img" alt="placholder">
+                        </div>
+                    </div>
+                    <div class="dashboard_deposit flex_c" id="dashboard_deposit" style="display: none;">    <!-- dashboard deposit -->
+                        <div class="form_container">
+                            <div class="form_title">
+                                <div class="form_title-main">Deposit</div>
+                                <div class="form_title-subtitle">How much would you like to deposit?</div>
+                            </div>
+                            <div class="form_input-container flex_r">
+                                <form id="form_deposit">
+                                    <input class="form_input-box" id="input_deposit" type="number" min="0" placeholder=" " />
+                                    <div class="form_input-cut alt_d"></div>
+                                    <label for="input_deposit" class="form_input-placeholder">Deposit Amount</label>
+                                    <button class="form_input-enter" id="deposit_btn-submit" type="submit">
+                                        <i class="fas fa-sign-in-alt form_enter-img" id="deposit_btn-submit"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="deposit_quick flex_r">
+                            <button class="deposit_quick--btn" id="deposit_btn-1">TBD</button>
+                            <button class="deposit_quick--btn" id="deposit_btn-2">TBD</button>
+                            <button class="deposit_quick--btn" id="deposit_btn-3">TBD</button>
+                            <button class="deposit_quick--btn" id="deposit_btn-4">TBD</button>
+                        </div>
+                    </div>
+                    <div class="dashboard_withdraw flex_c" id="dashboard_withdraw" style="display: none;">      <!-- dashboard withdraw -->
+                        <div class="form_container">
+                            <div class="form_title">
+                                <div class="form_title-main">Withdraw</div>
+                                <div class="form_title-subtitle">How much would you like to withdraw?</div>
+                            </div>
+                            <div class="form_input-container flex_r">
+                                <form id="form_withdraw">
+                                    <input class="form_input-box" id="input_withdraw" type="number" min="0" step="0.01" placeholder=" " />
+                                    <div class="form_input-cut alt_w"></div>
+                                    <label for="input_withdraw" class="form_input-placeholder">Withdraw Amount</label>
+                                    <button class="form_input-enter" id="withdraw_btn-submit" type="submit">
+                                        <i class="fas fa-sign-in-alt form_enter-img" id="withdraw_btn-submit"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="withdraw_quick flex_r">
+                            <button class="withdraw_quick--btn" id="withdraw_btn-1">TBD</button>
+                            <button class="withdraw_quick--btn" id="withdraw_btn-2">TBD</button>
+                            <button class="withdraw_quick--btn" id="withdraw_btn-3">TBD</button>
+                            <button class="withdraw_quick--btn" id="withdraw_btn-4">TBD</button>
+                        </div>
+                    </div>
+                    <div class="dashboard_transfer flex_c" id="dashboard_transfer" style="display: none;">      <!-- dashboard transfer -->
+                        <div class="form_container">
+                            <div class="form_title">
+                                <div class="form_title-main">Transfer</div>
+                                <div class="form_title-subtitle">How much would you like to transfer?</div>
+                            </div>
+                            <div class="form_input-container flex_r">
+                                <form id="form_transfer">
+                                    <input class="form_input-box" id="input_transfer" type="number" min="0" step="0.01" placeholder=" " />
+                                    <div class="form_input-cut"></div>
+                                    <label for="input_transfer" class="form_input-placeholder">Transfer Amount</label>
+                                    <button class="form_input-enter" id="transform_btn-submit" type="submit">
+                                        <i class="fas fa-sign-in-alt form_enter-img" id="transform_btn-submit"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="form_input-container--alt flex_r">
+                                <form id="form_transfer--alt">
+                                    <input class="form_input-box--alt" id="input_transfer--alt" type="number" min="0" step="0.01" placeholder=" " />
+                                    <div class="form_input-cut--alt"></div>
+                                    <label for="input_transfer--alt" class="form_input-placeholder--alt">Character ID #</label>
+                                    <button class="form_input-enter--alt" id="transform_btn-submit--alt" type="submit">
+                                        <i class="fas fa-sign-in-alt form_enter-img" id="transform_btn-submit--alt"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard_adds flex" id="dashboard_ads">
+                        <div class="dashboard_ad-1">
+                            <img src="./assets/ad_1.png" class="ad-img" alt="ad_placholder">
+                        </div>
+                        <div class="dashboard_ad-2">
+                            <img src="./assets/ad_2.png" class="ad-img" alt="ad_placholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

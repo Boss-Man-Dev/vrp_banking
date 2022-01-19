@@ -1,0 +1,86 @@
+/* Default */
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* HTML  */
+a{
+    text-decoration: none;
+    position: relative;
+}
+li{
+    list-style-type: none;
+}
+button{
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+}
+/* Special */
+.flex{
+    display: flex;
+}
+.flex_c{
+    display: flex;
+    flex-direction: column;
+}
+.flex_r{
+    display: flex;
+    flex-direction: row;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.selection{
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+#container{
+    min-height: 80vh;
+    width: 120vh;
+    border-radius: 10px;
+    margin: 4% auto;
+}
+/* Deposit main & Withdraw Main */
+.dashboard_deposit, .dashboard_withdraw, .dashboard_transfer{
+    height: 38vh;
+    width: 80vh;
+    background-color: #2E2E3C;
+    margin: 4% 3.5%;
+    border-radius: 12px;
+    position: relative;
+}
+.deposit_quick, .withdraw_quick{
+    height: 12vh;
+    width: 80vh;
+    justify-content: space-around;
+}
+.deposit_quick--btn, .withdraw_quick--btn{
+    height: 8vh;
+    width: 15vh;
+    background-color: #22222C;
+    border-radius: 12px;
+    margin: 0% auto;
+    margin-bottom: 4%;
+    border-color: rgba(128, 255, 0, 0);
+    font-size: 2.5vh;
+    color: #c4c4c4;
+}
+
+.deposit_quick--btn:hover, .withdraw_quick--btn:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(128, 255, 0, 0);
+    color: white;
+}
