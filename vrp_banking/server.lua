@@ -5,7 +5,6 @@ local Banking = class("Banking", vRP.Extension)
 Banking.event = {}
 Banking.tunnel = {}
 
-
 function Banking:__construct()
 	vRP.Extension.__construct(self)
   
